@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="Debit" class="com.assignment.DebitCardPayment" />
+	<bean id="Credit" class="com.assignment.CreditCardPayment" />
+	<bean id="flipkart" class="com.assignment.FlipkartService">
+	<property name="payment" ref="Debit" />
+	<constructor-arg name ="paymnet" ref ="Credit"/>
+	</bean>
+
+</beans> 
